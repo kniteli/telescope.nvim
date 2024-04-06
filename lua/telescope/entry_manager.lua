@@ -137,7 +137,7 @@ function EntryManager:add_entry(picker, score, entry, prompt)
       return self:_insert_container_before(picker, index, node, new_container)
     end
 
-    if score < 1 and container[2] == score and picker.tiebreak(entry, container[1], prompt) then
+    if container[2] == score and picker.tiebreak(entry, container[1], prompt) then
       return self:_insert_container_before(picker, index, node, new_container)
     end
 
